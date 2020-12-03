@@ -11,16 +11,18 @@ namespace OutSystems.NssHolidayChecker {
 	public class CssHolidayChecker: IssHolidayChecker {
 
         /// <summary>
-        /// C#/.NET Extension method to test whether or not a given business day is an observed US Holiday.
-        ///Supported Holidays:
+        /// C#/.NET Extension method to test whether or not a given business day is an observed US Holiday. 
+        ///
+        /// Rule-based so it will work for any year.
+        /// 
+        /// Supported Holidays:
         /// 
         /// Fixed Holidays
         /// New Year's Day (January 1)
         /// Independence Day (July 4)
         /// Veterans Day (November 11)
         /// Christmas Day (December 25)
-        /// 
-        /// 
+        ///
         /// Variable Holidays
         /// Martin Luther King Day (third Monday in January)
         /// President's Day (third Monday in February)
@@ -28,9 +30,16 @@ namespace OutSystems.NssHolidayChecker {
         /// Labor Day (first Monday in September)
         /// Columbus Day (second Monday in October)
         /// Thanksgiving Day (fourth Thursday in November)
-        /// 
-        /// 
-        /// Rule-based so it works for any year.
+        ///
+        /// Weekend-Adjusted Holidays
+        /// New Year's Day (December 31)
+        /// New Year's Day (January 2)
+        /// Independence Day (July 3)
+        /// Independence Day (July 5)
+        /// Veterans Day (November 10)
+        /// Veterans Day (November 11)
+        /// Christmas Day (December 24)
+        /// Christmas Day (December 26)
         /// </summary>
         /// <param name="ssdateToCheck"></param>
         /// <param name="ssresult"></param>
